@@ -1,8 +1,8 @@
 {
-  "name": "cycle-translator",
+  "name": "lost-in-translation",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://alexander-ding.github.io/cycle-translator",
+  "homepage": "http://alexander-ding.github.io/lost-in-translation",
   "proxy": "http://localhost:4000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",

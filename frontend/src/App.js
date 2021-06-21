@@ -20,7 +20,7 @@ const App = () => {
       <Container>
         <Menu.Item header as={Link} to='/'>
           <Image size='mini' src={logo} />
-          <span style={{ marginLeft: '1em' }}>Cycle Translator</span>
+          <span style={{ marginLeft: '1em' }}>Lost in Translation</span>
         </Menu.Item>
         <Menu.Item position='right' as={Link} to='about'>What is This?</Menu.Item>
       </Container>

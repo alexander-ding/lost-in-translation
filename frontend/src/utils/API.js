@@ -1,4 +1,4 @@
-const BASE_URL = 'https://cycle-translator.herokuapp.com'
+const BASE_URL = 'https://lost-in-translation-gh.herokuapp.com'
 
 export const getLanguages = () => {
   return fetch(BASE_URL + '/api/languages', {

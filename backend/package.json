@@ -1,5 +1,5 @@
 {
-  "name": "cycletranslator",
+  "name": "lost-in-translation",
   "version": "1.0.0",
   "description": "Pass text around Google Translate a bunch to mess it up!",
   "main": "app.js",
