@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import HomePageContainer from './containers/HomePageContainer';
 
 const App = () => {
-  return <Router>
+  return <Router basename={process.env.BASE_URL}>
     <Menu
       borderless
       fixed='top'
