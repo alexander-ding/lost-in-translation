@@ -14,8 +14,9 @@ export const getLanguages = () => {
 }
 
 export const postTranslate = (text, fromLanguage, hops) => {
+  const allHops = [fromLanguage, ...hops, fromLanguage];
   const params = new URLSearchParams({
-    hops: hops.join(','),
+    hops: allHops.join(','),
     from: fromLanguage,
   });
   return fetch(BASE_URL + '/api/translate?' + params.toString(), {

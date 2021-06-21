@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import HomePageContainer from './containers/HomePageContainer';
 
 const App = () => {
-  console.log(process.env.PUBLIC_URL)
   return <Router basename={process.env.PUBLIC_URL}>
     <Menu
       borderless
