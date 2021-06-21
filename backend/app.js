@@ -5,7 +5,7 @@ const apiRouter = require('./api');
 const port = process.env.PORT || 4000;
 
 app.use(cors({
-  origin: 'https://alexander-ding.github.io'
+  origin: '*'
 }));
 app.use(express.json());
 app.use('/api', apiRouter);

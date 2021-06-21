@@ -1,5 +1,7 @@
+const BASE_URL = 'https://cycle-translator.herokuapp.com'
+
 export const getLanguages = () => {
-  return fetch('/api/languages', {
+  return fetch(BASE_URL + '/api/languages', {
     method: 'GET',
   }).then(r => {
     if (!r.ok) {
@@ -12,12 +14,11 @@ export const getLanguages = () => {
 }
 
 export const postTranslate = (text, fromLanguage, hops) => {
-  const allHops = [fromLanguage, ...hops, fromLanguage];
   const params = new URLSearchParams({
-    hops: allHops.join(','),
+    hops: hops.join(','),
     from: fromLanguage,
   });
-  return fetch('/api/translate?' + params.toString(), {
+  return fetch(BASE_URL + '/api/translate?' + params.toString(), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
