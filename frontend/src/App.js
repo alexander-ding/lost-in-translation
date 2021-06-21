@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Redirect, Route, Switch } from 'react-router-dom';
 import { Container, Image, Menu } from 'semantic-ui-react';
 import logo from './assets/logo.png';
 import AboutPage from './components/AboutPage';
@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import HomePageContainer from './containers/HomePageContainer';
 
 const App = () => {
+  console.log(process.env.PUBLIC_URL)
   return <Router basename={process.env.PUBLIC_URL}>
     <Menu
       borderless
@@ -18,11 +19,11 @@ const App = () => {
       }}
     >
       <Container>
-        <Menu.Item header as='a' href='/'>
+        <Menu.Item header as={Link} to='/'>
           <Image size='mini' src={logo} />
           <span style={{ marginLeft: '1em' }}>Cycle Translator</span>
         </Menu.Item>
-        <Menu.Item position='right' as='a' href='about'>What is This?</Menu.Item>
+        <Menu.Item position='right' as={Link} to='about'>What is This?</Menu.Item>
       </Container>
     </Menu>
     <Container style={{ paddingTop: '6em', paddingBottom: '1em', display: 'flex', flexDirection: 'column', height: '100vh' }}>
