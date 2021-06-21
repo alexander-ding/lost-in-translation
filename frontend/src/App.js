@@ -1,4 +1,5 @@
 import React from 'react';
+import { use100vh } from 'react-div-100vh';
 import { BrowserRouter as Router, Link, Redirect, Route, Switch } from 'react-router-dom';
 import { Container, Image, Menu } from 'semantic-ui-react';
 import logo from './assets/logo.png';
@@ -7,6 +8,7 @@ import Footer from './components/Footer';
 import HomePageContainer from './containers/HomePageContainer';
 
 const App = () => {
+  const height = use100vh();
   return <Router basename={process.env.PUBLIC_URL}>
     <Menu
       borderless
@@ -25,7 +27,7 @@ const App = () => {
         <Menu.Item position='right' as={Link} to='about'>What is This?</Menu.Item>
       </Container>
     </Menu>
-    <Container style={{ paddingTop: '6em', paddingBottom: '1em', display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <Container style={{ paddingTop: '6em', paddingBottom: '1em', display: 'flex', flexDirection: 'column', height }}>
       <Switch>
         <Route path='/' exact>
           <HomePageContainer />
