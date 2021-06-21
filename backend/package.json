@@ -4,7 +4,7 @@
   "description": "Pass text around Google Translate a bunch to mess it up!",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "if [$NODE_ENV == 'production']; then node app.js; else nodemon app.js; fi",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Ding",
